@@ -31,25 +31,25 @@ app.listen(5000, () => {
   console.log("Server is running");
 });
 
-app.post("/post", (req, res) => {
-  console.log(req.body);
-  const { data } = req.body;
-});
+// app.post("/post", (req, res) => {
+//   console.log(req.body);
+//   const { data } = req.body;
+// });
 
-const User = mongoose.model("User");
+// const User = mongoose.model("User");
 
-app.post("/register", async (req, res) => {
-  const { firstName, lastName, email, password } = req.body;
-  try {
-    await User.create({
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password,
-    });
-    res.send({ status: "ok" });
-  } catch (error) {
-    res.send({ status: "error" });
-    console.error;
-  }
-});
+// app.post("/register", async (req, res) => {
+//   const { firstName, lastName, email, password } = req.body;
+//   try {
+//     await User.create({
+//       firstName: firstName,
+//       lastName: lastName,
+//       email: email,
+//       password: password,
+//     });
+//     res.send({ status: "ok" });
+//   } catch (error) {
+//     res.send({ status: "error" });
+//     console.error;
+//   }
+// });
